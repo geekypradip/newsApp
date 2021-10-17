@@ -1,7 +1,7 @@
 let getDetais=(news)=>{
     let viewport=document.createElement('div')
         if(news.length===0){
-            viewport.innerHTML=`<h1 style="color:#fff">your requested news not found!</h1>`;
+            viewport.innerHTML=`<h1 style="color:#fff">your requested news not found! for Today date</h1>`;
         // document.querySelector('.container').append(viewport);
         return viewport;
         }     

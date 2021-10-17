@@ -1,12 +1,12 @@
 function fetchNavbarHTML(){
-        return `<h1>Get News</h1>
+        return `<h1 id="logo">Get News</h1>
         
-        <input type="text" placeholder="search your recipe">
+        <input type="text" placeholder="search news topic for today date" id="searchValue">
         <button id="search">search</button>
         
-        <div onclick="navigation(1)">Sports</div>
-        <div onclick="navigation(2)">Entertainment</div>
-        <div onclick="navigation(3)">Technogy</div>`
+        <div id="Sports">Sports</div>
+        <div id="Entertainment">Entertainment</div>
+        <div id="Technology">Technogy</div>`
     }
    let fetchNavbarCSS=()=> {
   return `body {
