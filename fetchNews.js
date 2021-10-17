@@ -15,7 +15,10 @@ document.querySelector('#search').onclick=()=>{
     alert("Enter your topic!")
     else{
         let data=document.getElementById('searchValue').value;
+        if(document.getElementById('check').checked)
          url=`https://newsapi.org/v2/everything?q=${data}&sortBy=popularity&from=${d}&apiKey=ef37a704a9a040e4b1d888594882b6d3`;
+         else
+         url=`https://newsapi.org/v2/everything?q=${data}&sortBy=popularity&apiKey=ef37a704a9a040e4b1d888594882b6d3`;
          hello();
          topHead(`TOP 10  NEWS:${data.toUpperCase()}`)
          document.getElementById('searchValue').value="";

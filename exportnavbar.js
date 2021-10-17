@@ -1,7 +1,8 @@
 function fetchNavbarHTML(){
         return `<h1 id="logo">Get News</h1>
         
-        <input type="text" placeholder="search news topic for today date" id="searchValue">
+        <input type="text" placeholder="search news topic" id="searchValue">
+        <input type="checkbox" id="check">Today only
         <button id="search">search</button>
         
         <div id="Sports">Sports</div>
@@ -45,7 +46,7 @@ function fetchNavbarHTML(){
     transition: 0.5s;
    
   }
-  input{
+  #searchValue{
     border:none;
   width:50%;
   height: 40px;
