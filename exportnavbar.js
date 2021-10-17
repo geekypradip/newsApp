@@ -1,5 +1,9 @@
 function fetchNavbarHTML(){
         return `<h1>Get News</h1>
+        
+        <input type="text" placeholder="search your recipe">
+        <button id="search">search</button>
+        
         <div onclick="navigation(1)">Sports</div>
         <div onclick="navigation(2)">Entertainment</div>
         <div onclick="navigation(3)">Technogy</div>`
@@ -13,19 +17,17 @@ function fetchNavbarHTML(){
     width: 100%;
     background-color: rgb(21, 3, 37);
     color: #fff;
-    font-weight: bold;
-     /*position: fixed;*/
-    /*overflow: hidden;*/
+    font-weight: bold; 
     border-bottom: 2px solid rgb(80, 76, 76);
-    /*padding-bottom: 40px;*/
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
+    padding-top: 10px;
   }
   #nav > h1 {
     margin: 0;
     padding: 0;
-    flex-basis: 40%;
+    flex-basis: 20%;
     text-align: left;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -43,6 +45,29 @@ function fetchNavbarHTML(){
     transition: 0.5s;
    
   }
+  input{
+    border:none;
+  width:50%;
+  height: 40px;
+  color:rgb(76, 219, 20);
+  border-bottom:1px solid hotpink;
+  border-radius: 7px;
+ 
+}
+#search{
+    background: indigo;
+    font-weight: bold;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 7px;
+    color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#search:hover{
+    border:1px solid rgb(255, 255, 255);
+}
   `;
 }
     export default fetchNavbarHTML;
