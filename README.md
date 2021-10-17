@@ -1,0 +1,3 @@
+# newsApp
+get news....
+for run the app use live server
