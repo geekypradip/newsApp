@@ -18,6 +18,9 @@ function fetchNavbarHTML(){
     /*overflow: hidden;*/
     border-bottom: 2px solid rgb(80, 76, 76);
     /*padding-bottom: 40px;*/
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
   }
   #nav > h1 {
     margin: 0;
