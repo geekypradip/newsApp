@@ -1,0 +1,52 @@
+.fogColor {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.658);
+  height: 100%;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  padding-top: 10px;
+}
+
+#img_size {
+  width: 100%;
+  background-size: cover;
+}
+#loading {
+  text-align: center;
+  width: 150px;
+}
+.newsheading {
+  background-color: rgb(99, 21, 7);
+  /* padding:0; */
+  margin: 0;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.newsContainer {
+  color: rgb(245, 243, 241);
+  display: flex;
+  border-bottom: 2px solid rgb(143, 141, 141);
+}
+.newsContainer > div:nth-child(1) {
+  flex-basis: 50%;
+  border-right: 2px solid rgb(143, 141, 141);
+}
+.newsContainer > div:nth-child(2) {
+  flex-basis: 50%;
+  /* text-align: center; */
+  border-right: 2px solid rgb(143, 141, 141);
+}
+/* .newsContainer > div:nth-child(3) {
+  flex-basis: 50%;
+} */
+a {
+  text-decoration: none;
+  color: rgb(238, 232, 231);
+  background: rgb(59, 181, 230);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+}
