@@ -1,12 +1,14 @@
 
 let showdata=document.createElement('div');
 import getDetais from './uimaker.js';
+import getApiKey from './apikey.js';
 //let da="2021-10-18";
 let date=new Date();
+let apikey=getApiKey();
 let d=`${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`
 let topnewsHeading=document.createElement("h1")
 //console.log(d===da)
-let url="https://newsapi.org/v2/top-headlines?country=in&apiKey=ef37a704a9a040e4b1d888594882b6d3";
+let url=`https://newsapi.org/v2/top-headlines?country=in&apiKey=${apikey}`;
 document.getElementById('logo').onclick=()=>{
     window.location.href="index.html"
 }
@@ -16,9 +18,9 @@ document.querySelector('#search').onclick=()=>{
     else{
         let data=document.getElementById('searchValue').value;
         if(document.getElementById('check').checked)
-         url=`https://newsapi.org/v2/everything?q=${data}&sortBy=popularity&from=${d}&apiKey=ef37a704a9a040e4b1d888594882b6d3`;
+         url=`https://newsapi.org/v2/everything?q=${data}&sortBy=popularity&from=${d}&apiKey=${apikey}`;
          else
-         url=`https://newsapi.org/v2/everything?q=${data}&sortBy=popularity&apiKey=ef37a704a9a040e4b1d888594882b6d3`;
+         url=`https://newsapi.org/v2/everything?q=${data}&sortBy=popularity&apiKey=${apikey}`;
          hello();
          topHead(`TOP 10  NEWS:${data.toUpperCase()}`)
          document.getElementById('searchValue').value="";
@@ -27,17 +29,17 @@ document.querySelector('#search').onclick=()=>{
  
 }
  document.getElementById('Sports').onclick=()=>{
-    url=`https://newsapi.org/v2/everything?q=Sports&sortBy=popularity&apiKey=ef37a704a9a040e4b1d888594882b6d3`;
+    url=`https://newsapi.org/v2/everything?q=Sports&sortBy=popularity&apiKey=${apikey}`;
     hello();
     topHead("TOP 10  NEWS:SPORTS")
 }
 document.getElementById('Entertainment').onclick=()=>{
-    url=`https://newsapi.org/v2/everything?q=Entertainment&sortBy=popularity&apiKey=ef37a704a9a040e4b1d888594882b6d3`;
+    url=`https://newsapi.org/v2/everything?q=Entertainment&sortBy=popularity&apiKey=${apikey}`;
     hello();
     topHead("TOP 10 NEWS: ENTERTAINMENT")
 }
 document.getElementById('Technology').onclick=()=>{
-    url=`https://newsapi.org/v2/everything?q=Technology&sortBy=popularity&apiKey=ef37a704a9a040e4b1d888594882b6d3`;
+    url=`https://newsapi.org/v2/everything?q=tech&sortBy=popularity&apiKey=${apikey}`;
     hello();
     topHead("TOP 10 NEWS :TECHNOLOGY")
 }
@@ -58,7 +60,7 @@ document.querySelector('#loading').style.width="200px";
     //console.log(Response)
     showdata.style.textAlign="left"
     showdata.innerHTML=null;
-    console.log(Response.articles);
+    console.log(Response.articles+"hii");
     let ui=getDetais(Response.articles);
     showdata.appendChild(ui)
 })
